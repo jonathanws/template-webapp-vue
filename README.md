@@ -10,9 +10,9 @@ Before doing any of the following steps, install your dependencides
 npm install
 ```
 
-## What's in the box? 📦
+## What's in the box?
 
-### Routing
+### 🚗 Routing
 
 When you need to add another page, start in `router.js`. This lets you assign a new page to a component.
 
@@ -22,11 +22,11 @@ For example if you wanted to add a **Settings** page you would:
 -   create a string (something like `/settings`) in `src/constants/paths.js`
 -   connect that string to that component in `src/router.js`
 
-### State management
+### 👩‍⚖️ State management
 
 If you need to save a value that can be read from any other place in the webapp, save it to the state with [Vuex](https://vuex.vuejs.org/). Start by declaring a placeholder value in `src/vuex/state.js`, and create a [mutation](https://vuex.vuejs.org/guide/mutations.html) to set it.
 
-### Color Styling
+### 🌈 Color Styling
 
 Using [SCSS/SASS](https://sass-lang.com/), we can style our app however we'd like. Declare any colors you'd like to use in `src/styles/_colors.scss`, or if you'd like to organize them you can create a new file, much like `src/styles/_material-colors.scss`. Then reference your colors like this:
 
@@ -38,7 +38,7 @@ Using [SCSS/SASS](https://sass-lang.com/), we can style our app however we'd lik
 }
 ```
 
-### Reactive design
+### 😲 Reactive design
 
 ```scss
 @import '../styles/_screen-sizes';
@@ -51,11 +51,11 @@ Using [SCSS/SASS](https://sass-lang.com/), we can style our app however we'd lik
 }
 ```
 
-### Fonts
+### ✍ Fonts
 
 Google's [Cabin font](https://fonts.google.com/specimen/Cabin) is included in `src/styles/_fonts.scss`;
 
-### CRUD example for tacos 🌮
+### 🌮 CRUD example for tacos
 
 Wondering how to write a module to consume API calls? The taco module (`src/modules/taco-module.js`) has examples for:
 
