@@ -10,6 +10,16 @@ Before doing any of the following steps, install your dependencides
 npm install
 ```
 
+## Building your webapp
+
+Build your webapp with
+
+```bash
+npm run build
+```
+
+This will create a `dist/` directory with your built webapp files
+
 ## What's in the box?
 
 ### 🚗 Routing
