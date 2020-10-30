@@ -7,13 +7,7 @@
 		</div>
 
 		<div class="links">
-			<router-link
-				v-for="({ text, to }, index) in links"
-				tag="div"
-				:key="index"
-				:to="to"
-				class="link"
-			>{{ text }}</router-link>
+			<router-link v-for="({ text, to }, index) in links" tag="div" :key="index" :to="to" class="link">{{ text }}</router-link>
 		</div>
 	</div>
 </template>

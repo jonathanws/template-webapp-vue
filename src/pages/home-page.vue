@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import welcomeSummary from '../components/welcome-summary'
+import welcomeSummary from '@/components/welcome-summary'
 
 export default {
 	name: 'homePage',
