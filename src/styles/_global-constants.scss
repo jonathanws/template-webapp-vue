@@ -1,0 +1,34 @@
+/**
+ * Constants used for the entire app
+ */
+
+@import './colors';
+@import './material-colors';
+@import './screen-sizes';
+@import './fonts.scss';
+
+// font used throughout the webapp
+$font-primary: Cabin;
+
+$accent-color: $light-blue-400;
+$accent-color-darker: $light-blue-600;
+$background-color: #f4f5f7;
+
+// Many items have rounder corners, so we'll make the consistent
+$border-radius: 6px;
+
+// window width required to change size of sidebar
+$sidebar-break-width: $tablet-landscape-up;
+// sidebar ul's left-right padding
+$sidebar-ul-leftright-padding: 12px;
+// sidebar ul's up-down padding
+$sidebar-ul-updown-padding: $sidebar-ul-leftright-padding * 2;
+// sidebar icon's widths
+$sidebar-icon-width: 20px;
+// width of the sidebar's li items when collapsed
+$sidebar-li-width-collapsed: $sidebar-ul-updown-padding * 2 + $sidebar-icon-width;
+// width of the sidebar when expanded
+$sidebar-expanded-width: 240px;
+
+// height of the navbar
+$topbar-size: 64px;

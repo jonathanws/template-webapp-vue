@@ -1,0 +1,62 @@
+/**
+ * This file defines how the layout reacts to different screen sizes.
+ * This means phones, tablets, and desktops will all look different.
+ *
+ * When editing this file, know that you should start with the smallest layouts
+ * first, and work your way up.  This is known as "mobile first design".
+ * This means that you're using min-* rules more than max-* rules.
+ */
+
+// Boundary strings
+$phone-only: phone-only;
+$tablet-portrait-up: tablet-portrait-up;
+$tablet-landscape-up: tablet-landscape-up;
+$desktop-up: desktop-up;
+$big-desktop-up: big-desktop-up;
+
+/**
+ * This SCSS mixin generates a helpful utility selector to use in components.
+ *
+ * To use, call your style like this:
+ *
+ *
+ *	.my-div {
+ *		padding: 10px;
+ *
+ *		@include for-size(desktop-up) {
+ *			padding: 20px;
+ *		}
+ *	}
+ *
+ * Read more here:
+ * https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/
+ **/
+@mixin for-size($range) {
+	// Boundary sizes
+	$phone-upper-boundary: 600px;
+	$tablet-portrait-upper-boundary: 900px;
+	$tablet-landscape-upper-boundary: 1200px;
+	$desktop-upper-boundary: 1800px;
+
+	@if $range == phone-only {
+		@media (max-width: #{$phone-upper-boundary - 1}) {
+			@content;
+		}
+	} @else if $range == tablet-portrait-up {
+		@media (min-width: $phone-upper-boundary) {
+			@content;
+		}
+	} @else if $range == tablet-landscape-up {
+		@media (min-width: $tablet-portrait-upper-boundary) {
+			@content;
+		}
+	} @else if $range == desktop-up {
+		@media (min-width: $tablet-landscape-upper-boundary) {
+			@content;
+		}
+	} @else if $range == big-desktop-up {
+		@media (min-width: $desktop-upper-boundary) {
+			@content;
+		}
+	}
+}
